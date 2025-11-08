@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: E-Commerce A/B Test - Abhinav Dubey</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        // Configuration for Tailwind CSS (Identical to index.html)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': {
+                            'DEFAULT': '#059669', 'light': '#34d399', 'dark': '#047857'
+                        },
+                        'neutral': {
+                            'light': '#f9fafb', 'DEFAULT': '#ffffff', 'dark': '#111827', 'medium': '#374151'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Style for empty image placeholders */
+        .image-placeholder {
+            background-color: #e5e7eb; /* gray-200 */
+            border: 2px dashed #9ca3af; /* gray-400 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #4b5563; /* gray-600 */
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark antialiased">
+
+    <!-- 
+      ============================================================
+      CASE STUDY HEADER
+      ============================================================
+    -->
+    <header class="bg-neutral sticky top-0 z-50 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Name (Links to Home) -->
+            <a href="index.html#home" class="text-xl font-bold text-neutral-dark">
+                Abhinav Dubey
+            </a>
+            <!-- Back to Projects Link -->
+            <a href="index.html#projects" class="font-medium text-gray-600 hover:text-primary transition-colors">
+                &larr; Back to All Projects
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 
+          ============================================================
+          PROJECT HERO SECTION
+          ============================================================
+        -->
+        <section class="py-16 md:py-24 bg-neutral-light border-b border-gray-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <span class="text-primary font-semibold uppercase tracking-wider">Case Study</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-neutral-dark mt-2 mb-6">
+                    E-Commerce A/B Test Validation
+                </h1>
+                <p class="text-xl text-neutral-medium mb-8">
+                    Validating a new landing page design for a toy store platform by analyzing 400,000 web sessions with SQL and rigorous statistical methods to ensure UI/UX improvements effectively reduced user drop-off.
+                </p>
+
+                <!-- Project Stats Bar -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-500 uppercase">Tools Used</h4>
+                        <p class="text-lg font-bold text-neutral-dark">SQL, Python, Statistical Validation</p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-500 uppercase">Data Volume</h4>
+                        <p class="text-lg font-bold text-neutral-dark">400,000 Web Sessions</p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-500 uppercase">Project Focus</h4>
+                        <p class="text-lg font-bold text-neutral-dark">Bounce Rate Reduction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          ============================================================
+          CASE STUDY CONTENT
+          ============================================================
+        -->
+        <section class="py-16 md:py-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <article class="prose prose-lg lg:prose-xl max-w-none text-neutral-medium" style="font-size: 1.125rem; line-height: 1.75;">
+                    
+                    <!-- Section 1: The Problem -->
+                    <h2 class="text-3xl font-bold text-neutral-dark mb-4">The Business Problem</h2>
+                    <p>
+                        The digital marketing team for a toy store e-commerce platform had a high bounce rate on their primary landing page. They hypothesized that a new, simplified UI/UX design would improve user engagement and reduce drop-off. My task was not just to compare the results, but to **rigorously validate** whether the new design ("Page B") was a *statistically significant* improvement over the old design ("Page A") before committing development resources to a full rollout.
+                    </p>
+
+                    <!-- 
+                        IMAGE PLACEHOLDER 1:
+                        Insert a compelling "hero" image for this case study.
+                        Recommended: A split-screen image showing "Landing Page A (Old Design)" 
+                        on one side and "Landing Page B (New Design)" on the other.
+                    -->
+                    <div class="image-placeholder w-full h-96 my-8">
+                        <p class="p-4"><strong>Image Placeholder:</strong><br>Split-screen comparison of the "Before" (Page A) and "After" (Page B) landing page designs.</p>
+                    </div>
+
+                    <!-- Section 2: My Analytical Approach -->
+                    <h2 class="text-3xl font-bold text-neutral-dark mt-12 mb-4">My Analytical Approach</h2>
+                    <p>
+                        To provide a data-driven conclusion, I followed a two-step process to ensure the analysis was clean, accurate, and statistically sound.
+                    </p>
+                    <h3 class="text-2xl font-bold text-neutral-dark mt-8 mb-4">Step 1: Data Cleaning & Filtering with SQL</h3>
+                    <p>
+                        The raw data contained over 400,000 web sessions, but not all were relevant to the A/B test. I used SQL to filter this traffic, isolating only the accurate test data. This involved:
+                    </p>
+                    <ul>
+                        <li>Filtering for the specific timeframe of the test.</li>
+                        <li>Isolating traffic that was correctly bucketed into "Page A" or "Page B".</li>
+                        <li>Excluding internal traffic, bot traffic, and sessions with confounding variables (e.g., users who saw both versions).</li>
+                    </ul>
+                    <!-- 
+                        IMAGE PLACEHOLDER 2:
+                        Insert a screenshot of the actual SQL query you wrote.
+                        Tip: This is powerful proof of your technical skill. 
+                        Format it nicely in a code block or take a clean screenshot.
+                    -->
+                    <div class="image-placeholder w-full h-64 my-8">
+                        <p class="p-4"><strong>Code Placeholder:</strong><br>A screenshot of the key SQL query used to filter the 400,000 web sessions.</p>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-neutral-dark mt-8 mb-4">Step 2: Rigorous Statistical Validation</h3>
+                    <p>
+                        Simply comparing the average bounce rates would be misleading. To confirm the results were not due to random chance, I conducted rigorous statistical validation. I used Python to:
+                    </p>
+                    <ul>
+                        <li>Calculate the bounce rates for each group (Page A and Page B).</li>
+                        <li>Perform a hypothesis test (e.g., a two-proportion z-test) to determine the p-value.</li>
+                        <li>Calculate the **confidence intervals** for the difference in bounce rates, providing a clear range of the likely impact.</li>
+                    </ul>
+
+                    <!-- Section 3: Findings -->
+                    <h2 class="text-3xl font-bold text-neutral-dark mt-12 mb-4">Findings & Deliverable</h2>
+                    <p>
+                        The analysis confirmed that the new design ("Page B") was a success. The results were not only positive but statistically significant.
+                    </p>
+                    <p>
+                        My analysis showed that **Page B had a 3.5% lower bounce rate than Page A**. The hypothesis test resulted in a p-value of &lt; 0.05, and the 95% confidence interval for the difference was [2.1%, 4.9%]. This provided high confidence that the observed improvement was real and not a statistical fluke.
+                    </p>
+                    <!-- 
+                        IMAGE PLACEHOLDER 3:
+                        Insert a graph showing your findings.
+                        Recommended: A clean bar chart comparing "Page A Bounce Rate" vs. 
+                        "Page B Bounce Rate", with error bars representing the confidence intervals.
+                    -->
+                    <div class="image-placeholder w-full h-80 my-8">
+                        <p class="p-4"><strong>Graph Placeholder:</strong><br>A bar chart: "Bounce Rate Comparison (A vs. B)" showing the clear winner and confidence intervals.</p>
+                    </div>
+
+                    <!-- Section 4: Impact -->
+                    <h2 class="text-3xl font-bold text-neutral-dark mt-12 mb-4">Conclusion & Impact</h2>
+                    <p>
+                        I delivered a final report to stakeholders with a clear, data-driven conclusion: **Proceed with the redesigned page.**
+                    </p>
+                    <p>
+                        By validating the UI/UX improvements with statistical rigor, I provided the team with the confidence needed to deploy the new design. This ensured development resources were spent effectively and directly contributed to a design that measurably reduced user drop-off, improving the top-of-funnel conversion path.
+                    </p>
+                </article>
+
+                <!-- 
+                  ============================================================
+                  PROJECT NAVIGATION
+                  ============================================================
+                -->
+                <hr class="mt-16 border-gray-200">
+                <div class="flex justify-between items-center mt-8">
+                    <a href="index.html#projects" class="font-medium text-gray-600 hover:text-primary transition-colors">
+                        &larr; All Projects
+                    </a>
+                    <!-- 
+                        PLACEHOLDER LINK:
+                        This will link to the *next* case study page once we build it.
+                    -->
+                    <a href="#" class="px-5 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-dark transition-colors">
+                        Next Project &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 
+      ============================================================
+      FOOTER
+      ============================================================
+    -->
+    <footer class="bg-neutral-dark text-neutral-light/70 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/abhinav-d-b713b2214" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="https://github.com/dubeyabhinav" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+                <a href="mailto:abhinavvv.dubey@gmail.com" class="hover:text-white transition-colors">Email</a>
+            </div>
+            <p>&copy; 2025 Abhinav Dubey. Built with a focus on data and clarity.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
