@@ -1,4 +1,4 @@
-Abhinav Dubey - Data Analyst Professional Portfolio
+## Abhinav Dubey - Data Analyst Professional Portfolio
 
 This repository hosts the source code for my professional, multi-page data analyst portfolio website. The site showcases my ability to deliver actionable business insights across various domains through in-depth case studies and data visualizations.
 
